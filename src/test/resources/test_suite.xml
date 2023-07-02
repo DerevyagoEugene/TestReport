@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="methods" thread-count="10">
+    <listeners>
+        <listener class-name="org.example.CustomisedReports" />
+    </listeners>
+    <test name="Group First">
+        <classes>
+            <class name="org.example.AppTest">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Group Second">
+        <classes>
+            <class name="org.example.AppTest">
+                <methods>
+                    <include name="test4"/>
+                    <include name="test5"/>
+                    <include name="test6"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Group Third">
+        <classes>
+            <class name="org.example.AppTest">
+                <methods>
+                    <include name="test7"/>
+                    <include name="test8"/>
+                    <include name="test9"/>
+                    <include name="test10"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
